@@ -1,0 +1,34 @@
+# ------------------------------------------------------------------------------
+# GCP Project Settings
+# ------------------------------------------------------------------------------
+project_id = "your-gcp-project-id"
+# region     = "asia-northeast1" # Optional: デフォルトから変更する場合にコメントを外してください
+# gemini_region = "us-central1" # Optional: Geminiのリージョンを個別に指定する場合にコメントを外してください
+
+# ------------------------------------------------------------------------------
+# Service Settings
+# ------------------------------------------------------------------------------
+# service_name = "backlog-gemini-reply" # Optional: デフォルトから変更する場合にコメントを外してください
+
+# ------------------------------------------------------------------------------
+# Backlog Integration Settings
+# ------------------------------------------------------------------------------
+backlog_space_url = "https://your-space.backlog.jp"
+backlog_api_key   = "your-backlog-api-key" # Sensitive
+
+# ------------------------------------------------------------------------------
+# Basic Authentication Settings for API Gateway
+# ------------------------------------------------------------------------------
+basic_auth_username = "your-username" # Sensitive
+basic_auth_password = "your-password" # Sensitive
+
+# ------------------------------------------------------------------------------
+# Vertex AI Gemini Settings
+# ------------------------------------------------------------------------------
+# gemini_model_name = "gemini-2.5-flash-lite" # Optional: デフォルトから変更する場合にコメントを外してください
+
+# ------------------------------------------------------------------------------
+# GCS Settings for Prompts
+# ------------------------------------------------------------------------------
+prompt_gcs_bucket_name      = "your-globally-unique-bucket-name-for-prompts"
+# system_prompt_gcs_file_path = "prompts/system_prompt.txt" # Optional: デフォルトから変更する場合にコメントを外してください

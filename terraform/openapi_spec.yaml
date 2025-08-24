@@ -1,0 +1,33 @@
+swagger: '2.0'
+info:
+  title: backlog-gemini-reply
+  description: API for replying to Backlog issues with Gemini
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+securityDefinitions:
+  # This section defines the security scheme
+  basic_auth:
+    type: basic
+
+paths:
+  /webhook:
+    post:
+      summary: Backlog webhook receiver
+      operationId: webhook
+      x-google-backend:
+        # The address of the Cloud Function to route to.
+        # This will be populated by Terraform.
+        address: ${function_url} 
+      # This section applies the 'basic_auth' scheme to this path
+      security:
+        - basic_auth: []
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+        '401':
+          description: Unauthorized
